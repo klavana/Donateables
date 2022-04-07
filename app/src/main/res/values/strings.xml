@@ -1,0 +1,42 @@
+<resources>
+
+    //main page strs
+    <string name="app_name">A4G_KSD</string>
+    <string name="userViewTextStr">Client View</string>
+    <string name="logoStr">"Donateables"</string>
+    <string name="openerMsgStr">"Hi! What would you like to do today?"</string>
+    <string name="browseReqStr">"Browse Organizational Requests"</string>
+    <string name="addItemStr">"Add an Item to Offers List"</string>
+    <string name="profileStr">"Browse User Offers"</string>
+    <string name="addItemPageHeader">Add Items Below</string>
+    <string name="addItemName">Item Name</string>
+    <string name="itemQuantityStr">Item Quantity</string>
+    <string name="checkBoxOneStr">Accept Partial Request Fulfillment</string>
+    <string name="buttonItemAddStr">Submit Item As User</string>
+    <string name="buttonItemAddOrgStr">Submit Item As Org</string>
+    <string name="itemNameCheck">Item Name</string>
+    <string name="itemQuantityCheck">Item Quantity</string>
+    <string name="addressCheck">Pick-up address</string>
+    <string name="checkStr">Please check all information below before submitting</string>
+    <string name="viewOrgReqStr">View Organizational Requests</string>
+    <string name="ViewUserOfferStr">View Pending User Offers</string>
+    <string name="CompOfferStr">View Delivered Offers</string>
+    <string name="toUserOffersStr">View your offers</string>
+
+    //Sign up page strs
+    <string name="welcomeStr">" Welcome to DonateConnect"</string>
+    <string name="signUpStr">"Create your profile!"</string>
+    <string name="genUserStr">"General User"</string>
+    <string name="orgStr">"Organizational User"</string>
+    <string name="accountTypeStr">"Account Type?"</string>
+    <string name="usernameLabel">"Enter a username: "</string>
+    <string name="usernameStr">"Username"</string>
+    <string name="emailLabel">"Enter your email: "</string>
+    <string name="emailStr">"Email "</string>
+    <string name="zipcodeLabel">"Enter your zipcode: "</string>
+    <string name="UserRadio">Regular User</string>
+    <string name="textOff1">Regular User</string>
+    <string name="textOn1">Organization</string>
+
+
+</resources>
