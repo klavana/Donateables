@@ -12,7 +12,7 @@ public class Item {
 	private String name;
 	private int count;
 	// private String destination;
-	// private String origin;
+	private String origin;
 	private boolean acceptedByOrg;
 	private boolean acceptedByDriver;
 
@@ -85,9 +85,9 @@ public class Item {
 	 * 
 	 * @return item origin
 	 */
-	/*
-	 * public String getOrigin() { return origin; }
-	 */
+
+	 public String getOrigin() { return origin; }
+
 
 	/**
 	 * Returns the organization status boolean variable
