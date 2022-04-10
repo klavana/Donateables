@@ -24,7 +24,7 @@
     <string name="toUserOffersStr">View your offers</string>
 
     //Sign up page strs
-    <string name="welcomeStr">" Welcome to DonateConnect"</string>
+    <string name="welcomeStr">" Welcome to Donateables"</string>
     <string name="signUpStr">"Create your profile!"</string>
     <string name="genUserStr">"General User"</string>
     <string name="orgStr">"Organizational User"</string>
@@ -37,6 +37,14 @@
     <string name="UserRadio">Regular User</string>
     <string name="textOff1">Regular User</string>
     <string name="textOn1">Organization</string>
+    <string name="enterNameStr">Please Enter a Username: </string>
+    <string name="enterNameHintStr">Enter a username</string>
+    <string name="enterAddressStr">Please Enter Your Address: </string>
+    <string name="enterAddressHintStr">Enter your address</string>
+    <string name="enterEmailStr">Please Enter Your Email: </string>
+    <string name="enterEmailHintStr">Enter your email</string>
+
+
 
 
 </resources>
