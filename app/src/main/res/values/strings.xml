@@ -6,8 +6,8 @@
     <string name="logoStr">"Donateables"</string>
     <string name="openerMsgStr">"Hi! What would you like to do today?"</string>
     <string name="browseReqStr">"Browse Organizational Requests"</string>
-    <string name="addItemStr">"Add an Item to Offers List"</string>
-    <string name="profileStr">"Browse User Offers"</string>
+    <string name="addItemStr">"Add Item to Donatables"</string>
+    <string name="profileStr">"Settings and Profile"</string>
     <string name="addItemPageHeader">Add Items Below</string>
     <string name="addItemName">Item Name</string>
     <string name="itemQuantityStr">Item Quantity</string>
@@ -18,7 +18,7 @@
     <string name="itemQuantityCheck">Item Quantity</string>
     <string name="addressCheck">Pick-up address</string>
     <string name="checkStr">Please check all information below before submitting</string>
-    <string name="viewOrgReqStr">View Organizational Requests</string>
+    <string name="viewOrgReqStr">View Org. Requests</string>
     <string name="ViewUserOfferStr">View Pending User Offers</string>
     <string name="CompOfferStr">View Delivered Offers</string>
     <string name="toUserOffersStr">View your offers</string>
@@ -37,6 +37,7 @@
     <string name="UserRadio">Regular User</string>
     <string name="textOff1">Regular User</string>
     <string name="textOn1">Organization</string>
+    <string name="viewUserReqStr">View Local Donatables</string>
 
 
 </resources>
