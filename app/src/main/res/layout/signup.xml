@@ -33,17 +33,6 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/logo3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="320dp"
-        android:layout_marginTop="52dp"
-        android:contentDescription="@string/app_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/sym_def_app_icon" />
-
     <TextView
         android:id="@+id/signUpStr"
         android:layout_width="384dp"

@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void ViewOrgReq(View v) {
         Intent intent = new Intent(this, ViewOrgReq.class);
-        String OrgReq = Double.toString(42);
+        String OrgReq = "Placeholder";
         intent.putExtra("key1", OrgReq);
         startActivity(intent);
     }

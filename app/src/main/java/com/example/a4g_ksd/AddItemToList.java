@@ -33,7 +33,6 @@ public class AddItemToList extends AppCompatActivity {
         editItemQuantity= findViewById(R.id.editItemQuantity);
         editItemName = findViewById(R.id.EditItemName);
         Intent intent = getIntent();
-        Toast.makeText(getApplicationContext(),"Add Item to List Working",Toast.LENGTH_SHORT).show();
     }
     public void toUserOffers(View v) {
         Intent intent = new Intent(this, UserOffers.class);

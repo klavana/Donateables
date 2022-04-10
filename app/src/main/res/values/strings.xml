@@ -6,8 +6,8 @@
     <string name="logoStr">"Donateables"</string>
     <string name="openerMsgStr">"Hi! What would you like to do today?"</string>
     <string name="browseReqStr">"Browse Organizational Requests"</string>
-    <string name="addItemStr">"Add an Item to Offers List"</string>
-    <string name="profileStr">"Browse User Offers"</string>
+    <string name="addItemStr">"Add Item to Donatables"</string>
+    <string name="profileStr">"Settings and Profile"</string>
     <string name="addItemPageHeader">Add Items Below</string>
     <string name="addItemName">Item Name</string>
     <string name="itemQuantityStr">Item Quantity</string>
@@ -37,6 +37,7 @@
     <string name="UserRadio">Regular User</string>
     <string name="textOff1">Regular User</string>
     <string name="textOn1">Organization</string>
+    <string name="viewUserReqStr">View Local Donateables</string>
     <string name="enterNameStr">Please Enter a Username: </string>
     <string name="enterNameHintStr">Enter a username</string>
     <string name="enterAddressStr">Please Enter Your Address: </string>
