@@ -6,7 +6,7 @@
     <string name="logoStr">"Donateables"</string>
     <string name="openerMsgStr">"Hi! What would you like to do today?"</string>
     <string name="browseReqStr">"Browse Organizational Requests"</string>
-    <string name="addItemStr">"Add Item to Donatables"</string>
+    <string name="addItemStr">"Add Item to Donateables"</string>
     <string name="profileStr">"Settings and Profile"</string>
     <string name="addItemPageHeader">Add Items Below</string>
     <string name="addItemName">Item Name</string>
@@ -24,7 +24,7 @@
     <string name="toUserOffersStr">View your offers</string>
 
     //Sign up page strs
-    <string name="welcomeStr">" Welcome to DonateConnect"</string>
+    <string name="welcomeStr">" Welcome to Donateables"</string>
     <string name="signUpStr">"Create your profile!"</string>
     <string name="genUserStr">"General User"</string>
     <string name="orgStr">"Organizational User"</string>
@@ -37,7 +37,10 @@
     <string name="UserRadio">Regular User</string>
     <string name="textOff1">Regular User</string>
     <string name="textOn1">Organization</string>
-    <string name="viewUserReqStr">View Local Donatables</string>
+    <string name="viewUserReqStr">View Local Donateables</string>
 
+    //Settings Strs
+    <string name="logoStrSettings">"Donateables Settings and Profile"</string>
+    <string name="settingsCheckBoxNotifications">Notifications</string>
 
 </resources>

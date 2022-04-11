@@ -28,6 +28,9 @@
         <activity
             android:name=".ViewOrgReq"
             android:exported="true" />
+        <activity
+            android:name=".SettingsProfile"
+            android:exported="true" />
     </application>
 
 </manifest>
