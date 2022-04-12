@@ -6,7 +6,7 @@
     <string name="logoStr">"Donateables"</string>
     <string name="openerMsgStr">"Hi! What would you like to do today?"</string>
     <string name="browseReqStr">"Browse Organizational Requests"</string>
-    <string name="addItemStr">"Add Item to Donatables"</string>
+    <string name="addItemStr">"Add Item to Donateables"</string>
     <string name="profileStr">"Settings and Profile"</string>
     <string name="addItemPageHeader">Add Items Below</string>
     <string name="addItemName">Item Name</string>

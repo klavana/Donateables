@@ -54,7 +54,7 @@ public class AddItemToList extends AppCompatActivity {
     public void addOffer(View v){
         Item i = new Item(getName(), getQuantity());
         final Controller controller = (Controller) getApplicationContext();
-        controller.getUser().addItem(i);
+        //MainActivity.user.addItem(i);
         Toast.makeText(getApplicationContext(),"Add Offer",Toast.LENGTH_SHORT).show();
         displayInfo();
         readItemDataFB(i);
