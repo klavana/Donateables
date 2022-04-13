@@ -31,6 +31,9 @@
         <activity
             android:name=".SettingsProfile"
             android:exported="true" />
+        <activity
+            android:name=".MainPage"
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1058815530028",
+    "project_id": "donateables-44997",
+    "storage_bucket": "donateables-44997.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058815530028:android:3fda88bfc1e053b3986d89",
+        "android_client_info": {
+          "package_name": "com.example.a4g_ksd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058815530028-1ihvph6abclu9taeje3j2ht04ff2brg9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgA01Clz_FmJgZplhc-2wADpV68Oh30k0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1058815530028-1ihvph6abclu9taeje3j2ht04ff2brg9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -18,7 +18,7 @@
     <string name="itemQuantityCheck">Item Quantity</string>
     <string name="addressCheck">Pick-up address</string>
     <string name="checkStr">Please check all information below before submitting</string>
-    <string name="viewOrgReqStr">View Org. Requests</string>
+    <string name="viewOrgReqStr">View Organizational Requests</string>
     <string name="ViewUserOfferStr">View Pending User Offers</string>
     <string name="CompOfferStr">View Delivered Offers</string>
     <string name="toUserOffersStr">View your offers</string>
@@ -38,6 +38,13 @@
     <string name="textOff1">Regular User</string>
     <string name="textOn1">Organization</string>
     <string name="viewUserReqStr">View Local Donateables</string>
+    <string name="enterNameStr">Please Enter a Username: </string>
+    <string name="enterNameHintStr">Enter a username</string>
+    <string name="enterAddressStr">Please Enter Your Address: </string>
+    <string name="enterAddressHintStr">Enter your address</string>
+    <string name="enterEmailStr">Please Enter Your Email: </string>
+    <string name="enterEmailHintStr">Enter your email</string>
+    <string name= "getStartedStr">Get Started!</string>
 
     //Settings Strs
     <string name="logoStrSettings">"Donateables Settings and Profile"</string>
