@@ -13,10 +13,17 @@ public class ViewOrgReq extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.vieworgreq);
         Intent intent = getIntent();
-       String OrgReq = intent.getStringExtra("key1");
+
+
+        final Controller aController = (Controller) getApplicationContext();
+       // String OrgReq = intent.getStringExtra(/*Enter logic here*/);
+        TextView textViewUserReqTester = findViewById(R.id.textViewUserReqTester);
+      //  textViewUserReqTester.setText(OrgReq);
+        TextView compOffers = findViewById(R.id.compOffers);
+     //   compOffers.setText(OrgReq);
 
        TextView textViewOrgReqTester = findViewById(R.id.textViewOrgReqTester);
-       textViewOrgReqTester.setText(OrgReq);
+    //   textViewOrgReqTester.setText(OrgReq);
 
     }
 }
