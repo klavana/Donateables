@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
     </LinearLayout>
-
+//sashank is here
     <TextView
         android:id="@+id/appNameAndLogo"
         android:layout_width="wrap_content"
