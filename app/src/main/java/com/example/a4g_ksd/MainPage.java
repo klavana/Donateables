@@ -27,6 +27,10 @@ public class MainPage extends AppCompatActivity {
         Intent intent = new Intent(this, AddItemToList.class);
         startActivity(intent);
     }
+    public void moveToSettings(View v) {
+        Intent intent = new Intent(this, SettingsProfile.class);
+        startActivity(intent);
+    }
     public void ViewOrgReq(View v) {
         Intent intent = new Intent(this, ViewOrgReq.class);
         String OrgReq = "Placeholder";

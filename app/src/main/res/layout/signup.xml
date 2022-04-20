@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_drawable"
-    android:onClick="setUser">
+    android:onClick="setUser"
+    android:textAlignment="center">
 
 
     <TextView
@@ -38,24 +39,13 @@
         android:id="@+id/constraintLayout4"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
-
-        <TextView
-            android:id="@+id/accountTypeView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/accountTypeStr"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.681"
-            app:layout_constraintStart_toEndOf="@+id/accountTypeView"
-            app:layout_constraintTop_toBottomOf="@+id/enterEmailEditText" />
 
         <TextView
             android:id="@+id/enterEmailTextView"
@@ -84,20 +74,6 @@
             app:layout_constraintHorizontal_bias="0.1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/enterNameEditText" />
-
-        <TextView
-            android:id="@+id/accountTypeView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="604dp"
-            android:layout_marginEnd="262dp"
-            android:text="@string/accountTypeStr"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.079"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/enterNameTextView"
@@ -162,43 +138,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/enterEmailTextView" />
 
-        <Button
-            android:id="@+id/genUserButton"
-            android:layout_width="251dp"
-            android:layout_height="77dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="292dp"
-            android:onClick="setUser"
-            android:text="@string/genUserStr"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.031"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/accountTypeView" />
-
-        <Button
-            android:id="@+id/orgButton"
-            android:layout_width="254dp"
-            android:layout_height="75dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="292dp"
-            android:onClick="setOrg"
-            android:text="@string/orgStr"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.034"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/genUserButton" />
-
         <TextView
             android:id="@+id/signUpStr"
             android:layout_width="384dp"
             android:layout_height="50dp"
-            android:layout_marginStart="97dp"
+            android:layout_marginStart="100dp"
             android:layout_marginTop="120dp"
-            android:layout_marginEnd="119dp"
+            android:layout_marginEnd="120dp"
             android:text="@string/signUpStr"
             android:textAlignment="center"
             android:textSize="34sp"
@@ -209,17 +155,47 @@
 
         <Button
             android:id="@+id/getStartedButton"
-            android:layout_width="219dp"
-            android:layout_height="101dp"
+            android:layout_width="220dp"
+            android:layout_height="100dp"
             android:onClick="moveToMainPage"
             android:text="@string/getStartedStr"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.908"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.797" />
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+            app:layout_constraintVertical_bias="0.909" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="40dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/getStartedButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enterEmailEditText">
+
+            <RadioButton
+                android:id="@+id/genUserRadio"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/genUserStr"
+                android:textSize="24sp" />
+
+            <RadioButton
+                android:id="@+id/orgRadio"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/textOn1"
+                android:textSize="24sp" />
+        </RadioGroup>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
