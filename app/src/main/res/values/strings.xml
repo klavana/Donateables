@@ -41,7 +41,7 @@
     <string name="enterNameStr">Please Enter a Username: </string>
     <string name="enterNameHintStr">Enter a username</string>
     <string name="enterAddressStr">Please Enter Your Address: </string>
-    <string name="enterAddressHintStr">Enter your address</string>
+    <string name="enterAddressHintStr">Street, City, Zip</string>
     <string name="enterEmailStr">Please Enter Your Email: </string>
     <string name="enterEmailHintStr">Enter your email</string>
     <string name= "getStartedStr">Get Started!</string>

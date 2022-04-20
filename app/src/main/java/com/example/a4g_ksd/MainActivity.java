@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -16,7 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
-
+    private boolean boolin;
     static User user ;
     static Organization org;
 
@@ -102,8 +103,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void moveToMainPage(View v) {
-        Intent intent = new Intent(this, MainPage.class);
-        startActivity(intent);
+        if(boolin) {
+            setUser(v);
+            Intent intent = new Intent(this, MainPage.class);
+            startActivity(intent);
+        }
+    }
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.genUserRadio:
+                if (checked)
+                    boolin = true;
+                    break;
+            case R.id.orgRadio:
+                if (checked)
+                    boolin = false;
+                    break;
+        }
     }
 
 

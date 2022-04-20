@@ -10,3 +10,6 @@
         android:angle = "135"
         android:type = "linear" />
 </shape>
+<!--    android:startColor = "#46A3D5"-->
+<!--    android:centerColor = "#8583C6"-->
+<!--    android:endColor = "#BF82CC"-->
