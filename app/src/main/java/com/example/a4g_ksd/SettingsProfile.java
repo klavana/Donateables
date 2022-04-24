@@ -18,7 +18,7 @@ public class SettingsProfile extends AppCompatActivity {
         final Controller controller = (Controller) getApplicationContext();
         addy.setText(" " + controller.getUser().getAddress());
         email.setText(" " + controller.getUser().getEmail());
-        instr.setText(" " + controller.getUser().getInstr());
+        //instr.setText(" " + controller.getUser().getInstr());
     }
 
 }

@@ -9,7 +9,7 @@ public class User {
 	private String address;
 	private String email;
 	private ArrayList<Item> items;
-	private String specInstr;
+	//private String specInstr;
 
 	// Constructors
 	public User() {
@@ -40,10 +40,6 @@ public class User {
 		return email;
 	}
 
-	public String getInstr() {
-		return specInstr;
-	}
-
 	public ArrayList<Item> getMyItems() {
 		return items;
 	}
@@ -69,9 +65,6 @@ public class User {
 		email = mail;
 	}
 
-	public void setInstr(String instr) {
-		specInstr = instr;
-	}
 
 	public void addItem(Item item) {
 		items.add(item);

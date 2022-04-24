@@ -53,8 +53,8 @@ public class AddItemToList extends AppCompatActivity {
 
     public void addOffer(View v){
         Item i = new Item(getName(), getQuantity());
-        final Controller controller = (Controller) getApplicationContext();
-        //MainActivity.user.addItem(i);
+        //final Controller controller = (Controller) getApplicationContext();
+        MainActivity.user.addItem(i);
         Toast.makeText(getApplicationContext(),"Add Offer",Toast.LENGTH_SHORT).show();
         displayInfo();
         readItemDataFB(i);
@@ -65,6 +65,13 @@ public class AddItemToList extends AppCompatActivity {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("items");
         myRef.push().setValue(i);
+        DatabaseReference myRef2 = database.getReference("users/general/"+MainActivity.user.getUserName()+"/items");
+        myRef2.push().setValue(i);
+
+    }
+
+
+
         /*// Read from the database
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -83,15 +90,15 @@ public class AddItemToList extends AppCompatActivity {
             }
         });*/
 
-    }
+
 
     private void displayInfo(){
-        final Controller controller = (Controller) getApplicationContext();
+        //final Controller controller = (Controller) getApplicationContext();
         TextView itemNameText = findViewById(R.id.itemNameDisp);
         TextView itemQuantityText = findViewById(R.id.itemQuantityDisp);
         TextView addressText = findViewById(R.id.addressDisp);
         itemNameText.setText("Item Name: " + getName());
         itemQuantityText.setText("Quantity: " + getQuantity());
-        addressText.setText("Pick-up Address: " + controller.getUser().getAddress());
+        addressText.setText("Pick-up Address: " + MainActivity.user.getAddress());
     }
 }

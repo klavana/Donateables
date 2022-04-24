@@ -13,7 +13,7 @@ public class Item {
 	private int count;
 	// private String destination;
 	private String origin;
-	private boolean acceptedByOrg;
+	private String acceptedByOrg;
 	private boolean acceptedByDriver;
 
 	// Constructor(s)
@@ -28,7 +28,7 @@ public class Item {
 		count = iCount;
 		// destination = iDes;
 		// origin = orig;
-		acceptedByOrg = false;
+		acceptedByOrg = "pending";
 		acceptedByDriver = false;
 	}
 
@@ -40,7 +40,7 @@ public class Item {
 		count = 1;
 		// destination = "Sample Destination Address";
 		// origin = "Sample Origin Address";
-		acceptedByOrg = false;
+		acceptedByOrg = "pending";
 		acceptedByDriver = false;
 	}
 
@@ -97,7 +97,13 @@ public class Item {
 	public String toString() {
 		return name + ", " + count;
 	}
-	public Boolean getOrgStatus() {
+
+	/**
+	 * Returns the organization status boolean variable
+	 *
+	 * @return org status
+	 */
+	public String getOrgStatus() {
 		return acceptedByOrg;
 	}
 

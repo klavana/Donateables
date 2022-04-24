@@ -40,4 +40,9 @@ public class MainPage extends AppCompatActivity {
         intent.putExtra("key3", CompOffer);
         startActivity(intent);
     }
+
+    public void moveToSettings(View v) {
+        Intent intent = new Intent(this, SettingsProfile.class);
+        startActivity(intent);
+    }
 }

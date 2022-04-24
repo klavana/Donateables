@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     static User user ;
     static Organization org;
 
-    //karisma was here
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +30,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
-        //final Controller controller = (Controller) getApplicationContext();
-
     }
 
     private String nameToString(){
@@ -58,13 +54,12 @@ public class MainActivity extends AppCompatActivity {
 
         user = new User(nameToString(), locationToString(), mailToString());
 
-
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("users");
-        DatabaseReference childRef1 = myRef.child(nameToString());
-        childRef1.push().setValue(user);
+        DatabaseReference myRef = database.getReference("users/general");
+            DatabaseReference childRef1 = myRef.child(nameToString());
+            childRef1.push().setValue(user);
 
-        Toast.makeText(getApplicationContext(),user.getUserName(),Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),user.getUserName(),Toast.LENGTH_SHORT).show();
 
     }
 
@@ -73,32 +68,12 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(),"Set Org",Toast.LENGTH_SHORT).show();
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("organizations");
-        DatabaseReference childRef1 = myRef.child(nameToString());
-        childRef1.push().setValue(org);
+        DatabaseReference myRef = database.getReference("users/organizations");
+            DatabaseReference childRef1 = myRef.child(nameToString());
+            childRef1.push().setValue(org);
 
-    }
+        Toast.makeText(getApplicationContext(),org.getUserName(),Toast.LENGTH_SHORT).show();
 
-    public void moveToAddItemToList(View v) {
-        Intent intent = new Intent(this, AddItemToList.class);
-        startActivity(intent);
-    }
-    public void moveToSettings(View v) {
-        Intent intent = new Intent(this, SettingsProfile.class);
-        startActivity(intent);
-    }
-    public void ViewOrgReq(View v) {
-        Intent intent = new Intent(this, ViewOrgReq.class);
-        String OrgReq = "Placeholder";
-        intent.putExtra("key1", OrgReq);
-        startActivity(intent);
-    }
-    public void UserOffers(View v) {
-        Intent intent = new Intent(this, UserOffers.class);
-        final Controller controller = (Controller) getApplicationContext();
-        String CompOffer = controller.getUser().getMyItemsList();
-        intent.putExtra("key3", CompOffer);
-        startActivity(intent);
     }
 
     public void moveToMainPage(View v) {
