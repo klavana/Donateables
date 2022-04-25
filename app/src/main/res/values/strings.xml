@@ -24,7 +24,7 @@
     <string name="toUserOffersStr">View your offers</string>
 
     //Sign up page strs
-    <string name="welcomeStr">" Welcome to Donateables"</string>
+    <string name="welcomeStr">"Donateables"</string>
     <string name="signUpStr">"Create your profile!"</string>
     <string name="genUserStr">"General User"</string>
     <string name="orgStr">"Organizational User"</string>
@@ -47,10 +47,13 @@
     <string name= "getStartedStr">Get Started!</string>
 
     //Settings Strs
-    <string name="logoStrSettings">"Donateables Settings and Profile"</string>
+    <string name="logoStrSettings">"Settings and Profile"</string>
     <string name="settingsCheckBoxNotifications">Notifications</string>
     <string name="EmailSetting">Email: </string>
     <string name="AddySettings">Address: </string>
     <string name="InstrSettings">Pick-Up Instructions:</string>
+    <string name="orgAddItemButton">"Add Item Request "</string>
+    <string name="addItemAsOrg">Add Item Request</string>
+    <string name="addReqOrg">Add Item Request</string>
 
 </resources>

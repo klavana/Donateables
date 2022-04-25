@@ -108,7 +108,13 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, MainPage.class);
             startActivity(intent);
         }
-    }
+        else {
+                setUser(v);
+                Intent intent = new Intent(this, MainOrgPage.class);
+                startActivity(intent);
+            }
+        }
+
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
