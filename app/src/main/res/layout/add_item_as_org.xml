@@ -5,7 +5,7 @@
     android:id="@+id/constraintLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background = "@drawable/gradient_drawable">
+    android:background="@drawable/gradient_drawable">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -39,7 +39,7 @@
         android:layout_height="88dp"
         android:layout_marginTop="248dp"
         android:onClick="addOffer"
-        android:text="@string/buttonItemAddStr"
+        android:text="@string/addReqOrg"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
@@ -48,18 +48,16 @@
 
     <Button
         android:id="@+id/toUserOfferPage"
-        android:layout_width="210dp"
-        android:layout_height="102dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="222dp"
+        android:layout_height="114dp"
+        android:layout_marginBottom="152dp"
         android:onClick="toUserOffers"
-        android:text="@string/toUserOffersStr"
+        android:text="@string/viewUserReqStr"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addressDisp"
-        app:layout_constraintVertical_bias="0.034" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editItemQuantity"
@@ -93,21 +91,6 @@
         app:layout_constraintTop_toBottomOf="@+id/itemNameDisp" />
 
     <TextView
-        android:id="@+id/addressDisp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/addressCheck"
-        android:textAlignment="center"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itemQuantityDisp"
-        app:layout_constraintVertical_bias="0.063" />
-
-    <TextView
         android:id="@+id/itemNameDisp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -126,7 +109,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:fontFamily="monospace"
-        android:text="@string/addItemPageHeader"
+        android:text="@string/addReqOrg"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="60sp"
