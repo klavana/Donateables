@@ -31,7 +31,7 @@ public class UserOffers extends AppCompatActivity {
         setContentView(R.layout.activity_user_offers);
 
         recyclerView = findViewById(R.id.pendingOffersRecycler);
-        ref = FirebaseDatabase.getInstance().getReference("items");
+        ref = FirebaseDatabase.getInstance().getReference("users/general/"+MainActivity.user.getUserName()+"/items");
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
