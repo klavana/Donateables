@@ -15,8 +15,8 @@ public class ViewOrgReq extends AppCompatActivity {
         Intent intent = getIntent();
 
 
-       // final Controller aController = (Controller) getApplicationContext();
-       // String OrgReq = intent.getStringExtra(/*Enter logic here*/);
+        // final Controller aController = (Controller) getApplicationContext();
+        // String OrgReq = intent.getStringExtra(/*Enter logic here*/);
        /* TextView textViewUserReqTester = findViewById(R.id.pendingOffers);
       //  textViewUserReqTester.setText(OrgReq);
         TextView compOffers = findViewById(R.id.deliveredOffers);
@@ -27,4 +27,3 @@ public class ViewOrgReq extends AppCompatActivity {
 
     }
 }
-

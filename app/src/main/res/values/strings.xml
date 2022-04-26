@@ -53,7 +53,7 @@
     <string name="AddySettings">Address: </string>
     <string name="InstrSettings">Pick-Up Instructions:</string>
 
-   //Item Strs
+    //Item Strs
     <string name="item_name">Item Name:</string>
     <string name="item_quantity">Item Quantity:</string>
     <string name="quantity">quantity</string>

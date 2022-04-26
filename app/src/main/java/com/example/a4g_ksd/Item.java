@@ -2,7 +2,7 @@ package com.example.a4g_ksd;
 
 /**
  * Models a Donation Item for the app
- * 
+ *
  * @author Sashank, David, Karisma
  *
  */
@@ -19,7 +19,7 @@ public class Item {
 	// Constructor(s)
 	/**
 	 * Constructs an Item with a given name, count, destination, and origin
-	 * 
+	 *
 	 * @param iName
 	 * @param iCount
 	 */
@@ -46,7 +46,7 @@ public class Item {
 
 	/**
 	 * Returns the name of the item
-	 * 
+	 *
 	 * @return item name
 	 */
 	public String getName() {
@@ -55,7 +55,7 @@ public class Item {
 
 	/**
 	 * Returns the count of the item
-	 * 
+	 *
 	 * @return item count
 	 */
 	public int getCount() {
@@ -64,7 +64,7 @@ public class Item {
 
 	/**
 	 * Sets the count of the item to the parameter count value
-	 * 
+	 *
 	 * @param newCount value
 	 */
 	public void setCount(int newCount) {
@@ -73,7 +73,7 @@ public class Item {
 
 	/**
 	 * Returns the destination of the item
-	 * 
+	 *
 	 * @return item destination
 	 */
 	/*
@@ -82,16 +82,16 @@ public class Item {
 
 	/**
 	 * Returns the origin of the item
-	 * 
+	 *
 	 * @return item origin
 	 */
 
-	 public String getOrigin() { return origin; }
+	public String getOrigin() { return origin; }
 
 
 	/**
 	 * Returns the organization status boolean variable
-	 * 
+	 *
 	 * @return organization status
 	 */
 	public String toString() {
@@ -109,7 +109,7 @@ public class Item {
 
 	/**
 	 * Returns the driver status boolean variable
-	 * 
+	 *
 	 * @return driver status
 	 */
 	public Boolean getDriverStatus() {

@@ -17,7 +17,7 @@ import com.google.firebase.database.ValueEventListener;
 // karisma commit
 public class MainActivity extends AppCompatActivity {
 
-    static User user ;
+    public static User user ;
     static Organization org;
 
 
@@ -56,10 +56,10 @@ public class MainActivity extends AppCompatActivity {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("users/general");
-            DatabaseReference childRef1 = myRef.child(nameToString());
-            childRef1.push().setValue(user);
+        DatabaseReference childRef1 = myRef.child(nameToString());
+        childRef1.push().setValue(user);
 
-            Toast.makeText(getApplicationContext(),user.getUserName(),Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),user.getUserName(),Toast.LENGTH_SHORT).show();
 
     }
 
@@ -69,8 +69,8 @@ public class MainActivity extends AppCompatActivity {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("users/organizations");
-            DatabaseReference childRef1 = myRef.child(nameToString());
-            childRef1.push().setValue(org);
+        DatabaseReference childRef1 = myRef.child(nameToString());
+        childRef1.push().setValue(org);
 
         Toast.makeText(getApplicationContext(),org.getUserName(),Toast.LENGTH_SHORT).show();
 
