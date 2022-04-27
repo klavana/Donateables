@@ -15,16 +15,15 @@ public class ViewOrgReq extends AppCompatActivity {
         Intent intent = getIntent();
 
 
-        final Controller aController = (Controller) getApplicationContext();
-       // String OrgReq = intent.getStringExtra(/*Enter logic here*/);
-        TextView textViewUserReqTester = findViewById(R.id.textViewUserReqTester);
+        // final Controller aController = (Controller) getApplicationContext();
+        // String OrgReq = intent.getStringExtra(/*Enter logic here*/);
+       /* TextView textViewUserReqTester = findViewById(R.id.pendingOffers);
       //  textViewUserReqTester.setText(OrgReq);
-        TextView compOffers = findViewById(R.id.compOffers);
+        TextView compOffers = findViewById(R.id.deliveredOffers);
      //   compOffers.setText(OrgReq);
 
        TextView textViewOrgReqTester = findViewById(R.id.textViewOrgReqTester);
-    //   textViewOrgReqTester.setText(OrgReq);
+    //   textViewOrgReqTester.setText(OrgReq);*/
 
     }
 }
-

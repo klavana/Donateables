@@ -35,7 +35,7 @@ public class MatchingAlgorithm {
 	}
 
 	/**
-	 * Constructs a matching algorithm which initializes the ArrayLists
+	 * Constructs a default matching algorithm which initializes the ArrayLists
 	 */
 	public MatchingAlgorithm() {
 		UserList = new ArrayList<Item>();
@@ -59,7 +59,7 @@ public class MatchingAlgorithm {
 			for (int y = 0; y < OrgList.size(); y++) {
 				if (UserList.get(x).getName().toLowerCase().equals(OrgList.get(y).getName().toLowerCase())) {
 					matchItems.add(UserList.get(x).getName());
-					match = true;
+					match = true; // what does this do
 					numMatches++;
 					int orgCount = OrgList.get(y).getCount();
 					int userCount = UserList.get(x).getCount();
@@ -83,27 +83,44 @@ public class MatchingAlgorithm {
 
 		return "Match Found: " + matchItems;
 	}
-
-	/**
-	 * Returns list of matched items between user and organization
-	 * 
-	 * @return matched item list
-	 */
-	public String getMatchedItems() {
-		return "Matched Items: " + matchItems;
+	//Setters
+	public void setUserList(ArrayList<Item> userList) {
+		UserList = userList;
 	}
 
-	/**
-	 * Returns list of user item history that has been fulfilled
-	 * 
-	 * @return User Item History List
-	 */
-	public String getItemHistory() {
-		return "User Item History: " + UserItemHistory;
+	public void setOrgList(ArrayList<Item> orgList) {
+		OrgList = orgList;
 	}
 
-	public int getNumberMatches() {
-		return numMatches;
+	public void setMatchItems(ArrayList<String> matchItems) {
+		this.matchItems = matchItems;
 	}
 
+	public void setUserItemHistory(ArrayList<String> userItemHistory) {
+		UserItemHistory = userItemHistory;
+	}
+
+	public void setMatch(boolean match) {
+		this.match = match;
+	}
+
+	public void setNumMatches(int numMatches) {
+		this.numMatches = numMatches;
+	}
+	//Getters
+	public ArrayList<Item> getUserList() {
+		return UserList;
+	}
+
+	public ArrayList<Item> getOrgList() {
+		return OrgList;
+	}
+
+	public ArrayList<String> getMatchItems() {
+		return matchItems;
+	}
+
+	public ArrayList<String> getUserItemHistory() {
+		return UserItemHistory;
+	}
 }

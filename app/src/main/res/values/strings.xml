@@ -56,4 +56,12 @@
     <string name="addItemAsOrg">Add Item Request</string>
     <string name="addReqOrg">Add Item Request</string>
 
+    //Item Strs
+    <string name="item_name">Item Name:</string>
+    <string name="item_quantity">Item Quantity:</string>
+    <string name="quantity">quantity</string>
+    <string name="status">Status:</string>
+    <string name="pending">pending</string>
+    <string name="name">name</string>
+
 </resources>

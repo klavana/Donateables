@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("users");
+        DatabaseReference myRef = database.getReference("users/general");
         DatabaseReference childRef1 = myRef.child(nameToString());
         childRef1.push().setValue(user);
 
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(),"Set Org",Toast.LENGTH_SHORT).show();
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("organizations");
+        DatabaseReference myRef = database.getReference("users/organizations");
         DatabaseReference childRef1 = myRef.child(nameToString());
         childRef1.push().setValue(org);
 
@@ -103,33 +103,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void moveToMainPage(View v) {
-        if(boolin) {
-            setUser(v);
-            Intent intent = new Intent(this, MainPage.class);
-            startActivity(intent);
-        }
-        else {
-                setUser(v);
-                Intent intent = new Intent(this, MainOrgPage.class);
-                startActivity(intent);
-            }
-        }
-
-    public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.genUserRadio:
-                if (checked)
-                    boolin = true;
-                    break;
-            case R.id.orgRadio:
-                if (checked)
-                    boolin = false;
-                    break;
-        }
+        Intent intent = new Intent(this, MainPage.class);
+        startActivity(intent);
     }
 
 

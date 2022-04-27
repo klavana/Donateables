@@ -2,7 +2,7 @@ package com.example.a4g_ksd;
 
 /**
  * Models a Donation Item for the app
- * 
+ *
  * @author Sashank, David, Karisma
  *
  */
@@ -13,13 +13,13 @@ public class Item {
 	private int count;
 	// private String destination;
 	private String origin;
-	private boolean acceptedByOrg;
+	private String acceptedByOrg;
 	private boolean acceptedByDriver;
 
 	// Constructor(s)
 	/**
 	 * Constructs an Item with a given name, count, destination, and origin
-	 * 
+	 *
 	 * @param iName
 	 * @param iCount
 	 */
@@ -28,7 +28,7 @@ public class Item {
 		count = iCount;
 		// destination = iDes;
 		// origin = orig;
-		acceptedByOrg = false;
+		acceptedByOrg = "pending";
 		acceptedByDriver = false;
 	}
 
@@ -40,13 +40,13 @@ public class Item {
 		count = 1;
 		// destination = "Sample Destination Address";
 		// origin = "Sample Origin Address";
-		acceptedByOrg = false;
+		acceptedByOrg = "pending";
 		acceptedByDriver = false;
 	}
 
 	/**
 	 * Returns the name of the item
-	 * 
+	 *
 	 * @return item name
 	 */
 	public String getName() {
@@ -55,7 +55,7 @@ public class Item {
 
 	/**
 	 * Returns the count of the item
-	 * 
+	 *
 	 * @return item count
 	 */
 	public int getCount() {
@@ -64,7 +64,7 @@ public class Item {
 
 	/**
 	 * Sets the count of the item to the parameter count value
-	 * 
+	 *
 	 * @param newCount value
 	 */
 	public void setCount(int newCount) {
@@ -73,7 +73,7 @@ public class Item {
 
 	/**
 	 * Returns the destination of the item
-	 * 
+	 *
 	 * @return item destination
 	 */
 	/*
@@ -82,28 +82,34 @@ public class Item {
 
 	/**
 	 * Returns the origin of the item
-	 * 
+	 *
 	 * @return item origin
 	 */
 
-	 public String getOrigin() { return origin; }
+	public String getOrigin() { return origin; }
 
 
 	/**
 	 * Returns the organization status boolean variable
-	 * 
+	 *
 	 * @return organization status
 	 */
 	public String toString() {
 		return name + ", " + count;
 	}
-	public Boolean getOrgStatus() {
+
+	/**
+	 * Returns the organization status boolean variable
+	 *
+	 * @return org status
+	 */
+	public String getOrgStatus() {
 		return acceptedByOrg;
 	}
 
 	/**
 	 * Returns the driver status boolean variable
-	 * 
+	 *
 	 * @return driver status
 	 */
 	public Boolean getDriverStatus() {
