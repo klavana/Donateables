@@ -103,9 +103,35 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void moveToMainPage(View v) {
-        Intent intent = new Intent(this, MainPage.class);
-        startActivity(intent);
+        if(boolin) {
+            setUser(v);
+            Intent intent = new Intent(this, MainPage.class);
+            startActivity(intent);
+        }
+        else {
+            setUser(v);
+            Intent intent = new Intent(this, MainOrgPage.class);
+            startActivity(intent);
+        }
     }
+
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.genUserRadio:
+                if (checked)
+                    boolin = true;
+                break;
+            case R.id.orgRadio:
+                if (checked)
+                    boolin = false;
+                break;
+        }
+    }
+
 
 
 }
