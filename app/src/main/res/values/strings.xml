@@ -64,4 +64,9 @@
     <string name="pending">pending</string>
     <string name="name">name</string>
 
+    //Org Request Strings
+    <string name="orgRequestTitles">My Requests</string>
+    <string name="toOrgRequest">View My Requests</string>
+    <string name="matchStr">Matches</string>
+
 </resources>

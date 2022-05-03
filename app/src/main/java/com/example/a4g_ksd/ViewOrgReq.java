@@ -1,29 +1,55 @@
 package com.example.a4g_ksd;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 public class ViewOrgReq extends AppCompatActivity {
+
+    RecyclerView recyclerView;
+    DatabaseReference ref;
+    MyAdapter adapter;
+    ArrayList<Item> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.vieworgreq);
-        Intent intent = getIntent();
 
+        recyclerView = findViewById(R.id.requestsRecycler2);
+        ref = FirebaseDatabase.getInstance().getReference("users/organizations/"+MainActivity.org.getUserName()+"/items");
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // final Controller aController = (Controller) getApplicationContext();
-        // String OrgReq = intent.getStringExtra(/*Enter logic here*/);
-       /* TextView textViewUserReqTester = findViewById(R.id.pendingOffers);
-      //  textViewUserReqTester.setText(OrgReq);
-        TextView compOffers = findViewById(R.id.deliveredOffers);
-     //   compOffers.setText(OrgReq);
+        list = new ArrayList<>();
+        adapter = new MyAdapter(this,list);
+        recyclerView.setAdapter(adapter);
 
-       TextView textViewOrgReqTester = findViewById(R.id.textViewOrgReqTester);
-    //   textViewOrgReqTester.setText(OrgReq);*/
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot: snapshot.getChildren()){
 
+                    Item item = dataSnapshot.getValue(Item.class);
+                    list.add(item);
+                }
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
     }
 }

@@ -5,14 +5,16 @@
     android:id="@+id/constraintLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background = "@drawable/gradient_drawable">
+    android:background="@drawable/gradient_drawable"
+    tools:context=".OrgRequests">
+    >
 
 
     <TextView
         android:id="@+id/viewPendingOffers"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/ViewUserOfferStr"
+        android:text="@string/orgRequestTitles"
         android:textAlignment="center"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"

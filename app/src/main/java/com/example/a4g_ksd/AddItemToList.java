@@ -4,17 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class AddItemToList extends AppCompatActivity {
 
@@ -30,8 +26,8 @@ public class AddItemToList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.additemtolist);
         // must be initialized in constructor
-        editItemQuantity= findViewById(R.id.editItemQuantity);
-        editItemName = findViewById(R.id.EditItemName);
+        editItemQuantity= findViewById(R.id.editQuantityOrg);
+        editItemName = findViewById(R.id.EditItemNameOrg);
         Intent intent = getIntent();
     }
     public void toUserOffers(View v) {

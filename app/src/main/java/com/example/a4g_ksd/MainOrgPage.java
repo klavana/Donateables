@@ -24,7 +24,7 @@ public class MainOrgPage extends AppCompatActivity {
     }
 
     public void moveToAddItemToList(View v) {
-        Intent intent = new Intent(this, AddItemToList.class);
+        Intent intent = new Intent(this, addItemAsOrg.class);
         startActivity(intent);
     }
     public void moveToSettings(View v) {
@@ -32,16 +32,7 @@ public class MainOrgPage extends AppCompatActivity {
         startActivity(intent);
     }
     public void ViewOrgReq(View v) {
-        Intent intent = new Intent(this, ViewOrgReq.class);
-        String OrgReq = "Placeholder";
-        intent.putExtra("key1", OrgReq);
-        startActivity(intent);
-    }
-    public void UserOffers(View v) {
-        Intent intent = new Intent(this, UserOffers.class);
-        final Controller controller = (Controller) getApplicationContext();
-        String CompOffer = controller.getUser().getMyItemsList();
-        intent.putExtra("key3", CompOffer);
+        Intent intent = new Intent(this, OrgRequests.class);
         startActivity(intent);
     }
 }

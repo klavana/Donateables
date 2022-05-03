@@ -17,7 +17,7 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/EditItemName"
+        android:id="@+id/EditItemNameOrg"
         android:layout_width="430dp"
         android:layout_height="73dp"
         android:layout_marginTop="32dp"
@@ -38,7 +38,7 @@
         android:layout_width="220dp"
         android:layout_height="88dp"
         android:layout_marginTop="248dp"
-        android:onClick="addOffer"
+        android:onClick="addRequest"
         android:text="@string/addReqOrg"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,8 +51,8 @@
         android:layout_width="222dp"
         android:layout_height="114dp"
         android:layout_marginBottom="152dp"
-        android:onClick="toUserOffers"
-        android:text="@string/viewUserReqStr"
+        android:onClick="myRequests"
+        android:text="@string/toOrgRequest"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +60,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editItemQuantity"
+        android:id="@+id/editQuantityOrg"
         android:layout_width="431dp"
         android:layout_height="67dp"
         android:layout_marginTop="36dp"
@@ -73,7 +73,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditItemName"
+        app:layout_constraintTop_toBottomOf="@+id/EditItemNameOrg"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="DuplicateSpeakableTextCheck" />
 

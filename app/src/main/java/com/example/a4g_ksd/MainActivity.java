@@ -32,9 +32,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
-        //final Controller controller = (Controller) getApplicationContext();
-
     }
 
     private String nameToString(){
@@ -72,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
     public void setOrg(View v) {
         org = new Organization(nameToString(), locationToString(), mailToString());
         Toast.makeText(getApplicationContext(),"Set Org",Toast.LENGTH_SHORT).show();
-
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("users/organizations");
         DatabaseReference childRef1 = myRef.child(nameToString());
@@ -109,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
         else {
-            setUser(v);
+            setOrg(v);
             Intent intent = new Intent(this, MainOrgPage.class);
             startActivity(intent);
         }
