@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_drawable"
-    tools:context=".Match">
+    tools:context=".MatchPage">
 
     <TextView
         android:id="@+id/textView"
@@ -15,14 +15,14 @@
         android:text="@string/matchStr"
         android:textColor="@color/black"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintBottom_toTopOf="@+id/matchesRecycler"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/matchesRecycler"
         android:layout_width="409dp"
         android:layout_height="624dp"
         app:layout_constraintBottom_toBottomOf="parent"

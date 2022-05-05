@@ -34,6 +34,18 @@
         <activity
             android:name=".MainPage"
             android:exported="true" />
+        <activity
+            android:name=".MainOrgPage"
+            android:exported="true" />
+        <activity
+            android:name=".addItemAsOrg"
+            android:exported="true" />
+        <activity
+            android:name=".OrgRequests"
+            android:exported="true" />
+        <activity
+            android:name=".MatchPage"
+            android:exported="true" />
     </application>
 
 </manifest>

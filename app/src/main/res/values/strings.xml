@@ -7,7 +7,7 @@
     <string name="openerMsgStr">"Hi! What would you like to do today?"</string>
     <string name="browseReqStr">"Browse Organizational Requests"</string>
     <string name="addItemStr">"Add Item to Donateables"</string>
-    <string name="profileStr">"Settings and Profile"</string>
+    <string name="matchPage">"Check your Matches!"</string>
     <string name="addItemPageHeader">Add Items Below</string>
     <string name="addItemName">Item Name</string>
     <string name="itemQuantityStr">Item Quantity</string>
@@ -57,10 +57,10 @@
     <string name="addReqOrg">Add Item Request</string>
 
     //Item Strs
-    <string name="item_name">Item Name:</string>
-    <string name="item_quantity">Item Quantity:</string>
+    <string name="item_name">Item Name: </string>
+    <string name="item_quantity">Item Quantity: </string>
     <string name="quantity">quantity</string>
-    <string name="status">Status:</string>
+    <string name="status">Status: </string>
     <string name="pending">pending</string>
     <string name="name">name</string>
 
@@ -68,5 +68,11 @@
     <string name="orgRequestTitles">My Requests</string>
     <string name="toOrgRequest">View My Requests</string>
     <string name="matchStr">Matches</string>
+
+    //Match strs
+    <string name="user_remain"> Donor Amount\n Remaining: </string>
+    <string name="amount1">amount</string>
+    <string name="org_remain">Organization Amount\n Remaining: </string>
+    <string name="amount2">amount</string>
 
 </resources>

@@ -48,7 +48,7 @@ public class AddItemToList extends AppCompatActivity {
     }
 
     public void addOffer(View v){
-        Item i = new Item(getName(), getQuantity());
+        Item i = new Item(getName(), getQuantity(),MainActivity.user);
         MainActivity.user.addItem(i);
         Toast.makeText(getApplicationContext(),"Add Offer",Toast.LENGTH_SHORT).show();
         displayInfo();
@@ -58,7 +58,7 @@ public class AddItemToList extends AppCompatActivity {
 
     private void readItemDataFB(Item i){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("items");
+        DatabaseReference myRef = database.getReference("items/general");
         myRef.push().setValue(i);
         DatabaseReference myRef2 = database.getReference("users/general/"+MainActivity.user.getUserName()+"/items");
         myRef2.push().setValue(i);

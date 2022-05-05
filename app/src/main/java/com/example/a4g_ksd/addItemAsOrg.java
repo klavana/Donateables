@@ -46,7 +46,7 @@ public class addItemAsOrg extends AppCompatActivity {
     }
 
     public void addRequest(View v){
-        Item i = new Item(getName(), getQuantity());
+        Item i = new Item(getName(), getQuantity(), MainActivity.org);
         MainActivity.org.addItem(i);
         Toast.makeText(getApplicationContext(),"Add Offer",Toast.LENGTH_SHORT).show();
         displayInfo();
@@ -56,8 +56,10 @@ public class addItemAsOrg extends AppCompatActivity {
 
     private void readItemDataFB(Item i){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("users/organizations/"+MainActivity.org.getUserName()+"/items");
+        DatabaseReference myRef = database.getReference("items/organizations");
         myRef.push().setValue(i);
+        DatabaseReference myRef2 = database.getReference("users/organizations/"+MainActivity.org.getUserName()+"/items");
+        myRef2.push().setValue(i);
     }
 
     private void displayInfo(){

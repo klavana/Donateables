@@ -80,16 +80,19 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AddItemToList.class);
         startActivity(intent);
     }
+
     public void moveToSettings(View v) {
         Intent intent = new Intent(this, SettingsProfile.class);
         startActivity(intent);
     }
+
     public void ViewOrgReq(View v) {
         Intent intent = new Intent(this, ViewOrgReq.class);
         String OrgReq = "Placeholder";
         intent.putExtra("key1", OrgReq);
         startActivity(intent);
     }
+
     public void UserOffers(View v) {
         Intent intent = new Intent(this, UserOffers.class);
         final Controller controller = (Controller) getApplicationContext();
@@ -114,7 +117,6 @@ public class MainActivity extends AppCompatActivity {
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
-
         // Check which radio button was clicked
         switch(view.getId()) {
             case R.id.genUserRadio:
@@ -127,7 +129,4 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
-
-
-
 }

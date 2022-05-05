@@ -7,8 +7,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_drawable"
     tools:context=".OrgRequests">
-    >
-
 
     <TextView
         android:id="@+id/viewPendingOffers"

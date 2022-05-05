@@ -11,14 +11,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
+public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.MyViewHolder> {
 
     //Data
     Context context;
-    ArrayList<Item> list;
+    ArrayList<Match> list;
 
     //Constructor
-    public MyAdapter(Context context, ArrayList<Item> list) {
+    public MatchAdapter(Context context, ArrayList<Match> list) {
         this.context = context;
         this.list = list;
     }
@@ -26,16 +26,16 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context).inflate(R.layout.item,parent,false);
+        View v = LayoutInflater.from(context).inflate(R.layout.match,parent,false);
         return new MyViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        Item item = list.get(position);
-        holder.name.setText(item.getName());
-        holder.quantity.setText(String.valueOf(item.getCount()));
-        holder.status.setText(item.getOrgStatus());
+        Match match = list.get(position);
+        holder.name.setText(match.getUser().getName());
+        holder.amount1.setText(String.valueOf(match.getUser().getCount()));
+
 
     }
 
@@ -45,14 +45,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView name,quantity,status;
+        TextView name,amount1,amount2;
 
-        public MyViewHolder(@NonNull View itemView) {
-            super(itemView);
+        public MyViewHolder(@NonNull View matchView) {
+            super(matchView);
 
-            name = itemView.findViewById(R.id.itemName);
-            quantity = itemView.findViewById(R.id.amount1);
-            status = itemView.findViewById(R.id.amount2);
+            name = matchView.findViewById(R.id.itemName);
+            amount1 = matchView.findViewById(R.id.amount1);
+            amount2 = matchView.findViewById(R.id.amount2);
         }
     }
 
