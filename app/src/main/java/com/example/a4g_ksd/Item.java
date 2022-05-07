@@ -30,6 +30,7 @@ public class Item {
 		acceptedByOrg = "pending";
 		acceptedByDriver = false;
 		associatedUser = user;
+		origin = user.getAddress();
 	}
 
 	/**

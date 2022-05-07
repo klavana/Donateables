@@ -1,5 +1,7 @@
 package com.example.a4g_ksd;
 
+import android.util.Log;
+
 import com.example.a4g_ksd.Item;
 
 import java.util.ArrayList;
@@ -12,13 +14,16 @@ public class Match {
 
     //Constructors
     public Match(Item user, Item org){
+        Log.d("Match","In Match" + user.getName()+(org.getName()) + user.getOrigin() + org.getOrigin());
         this.user = user;
         this.org = org;
         checkMatch();
+
     }
 
     //Methods
     private void checkMatch(){
+        Log.d("Match","In checkMatch" + user.getName()+(org.getName()) + user.getOrigin() + org.getOrigin());
         if (user.getName().equals(org.getName()) && user.getOrigin().equals(org.getOrigin())){
             match = true;
             if(user.getCount()<org.getCount()){
@@ -42,7 +47,9 @@ public class Match {
             match = false;
         }
     }
-
+    public String toString(){
+        return user.getName() +" " + getMatch();
+    }
 
     public Item getUser() {
         return user;
@@ -73,8 +80,9 @@ public class Match {
         for(Item userItem : userList){
             for(Item orgItem: orgList){
                 Match match = new Match(userItem, orgItem);
-                if (match.getMatch())
+                if (match.getMatch()) {
                     matches.add(match);
+                }
             }
 
         }
