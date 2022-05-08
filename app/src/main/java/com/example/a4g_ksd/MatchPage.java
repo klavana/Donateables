@@ -26,6 +26,8 @@ public class MatchPage extends AppCompatActivity {
     ArrayList<Match> matches;
     RecyclerView recyclerView;
     MatchAdapter adapter;
+    ArrayList<Item> userItems;
+    ArrayList<Item> orgItems;
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -34,11 +36,17 @@ public class MatchPage extends AppCompatActivity {
         genRef = FirebaseDatabase.getInstance().getReference("users/general/"+ MainActivity.user.getUserName() +"/items");
         orgRef = FirebaseDatabase.getInstance().getReference("items/organizations");
 
+        userItems = new ArrayList<Item>();
+        orgItems = new ArrayList<Item>();
+
         recyclerView = findViewById(R.id.matchesRecycler);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        matches = new ArrayList<>();
+        adapter = new MatchAdapter(this,matches);
+        recyclerView.setAdapter(adapter);
 
-        ArrayList<Item> userItems = new ArrayList<Item>();
+
 
         genRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -47,9 +55,10 @@ public class MatchPage extends AppCompatActivity {
 
                     Item item = dataSnapshot.getValue(Item.class);
                     userItems.add(item);
-                    Log.d("Match: ",item.getName());
+                    Log.d("MatchUsers: ",item.getName());
 
                 }
+                matches = Match.getMatchList(userItems, orgItems);
                 adapter.notifyDataSetChanged();
             }
 
@@ -57,7 +66,7 @@ public class MatchPage extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
             }
         });
-        ArrayList<Item> orgItems = new ArrayList<Item>();
+
         orgRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -65,10 +74,15 @@ public class MatchPage extends AppCompatActivity {
 
                     Item item = dataSnapshot.getValue(Item.class);
                     orgItems.add(item);
-                    Log.d("Match: ",item.getName());
+                    Log.d("MatchOrgs: ",item.getName());
 
                 }
-                adapter.notifyDataSetChanged();
+                Log.d("MatchOrgsSize: ",orgItems.size() + "");
+                matches = Match.getMatchList(userItems, orgItems);
+                adapter = new MatchAdapter(getApplicationContext(),matches);
+                recyclerView.setAdapter(adapter);
+                Log.d("Matcheslist: ",matches + "");
+
             }
 
             @Override
@@ -76,10 +90,10 @@ public class MatchPage extends AppCompatActivity {
             }
         });
 
-        Log.d("Match: ",userItems + " "+ orgItems);
-       matches = Match.getMatchList(userItems, orgItems);
-        adapter = new MatchAdapter(this,matches);
-        recyclerView.setAdapter(adapter);
+
+        Log.d("MatchBoth: ",userItems + " "+ orgItems);
+
+
 
     }
 
@@ -104,4 +118,4 @@ public class MatchPage extends AppCompatActivity {
 
         Log.d("Item2"," " + list.size());
         return list;*/
-    }
+}

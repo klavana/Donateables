@@ -35,8 +35,7 @@ public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.MyViewHolder
         Match match = list.get(position);
         holder.name.setText(match.getUser().getName());
         holder.amount1.setText(String.valueOf(match.getUser().getCount()));
-
-
+        holder.amount2.setText(String.valueOf(match.getUser().getCount()));
     }
 
     @Override

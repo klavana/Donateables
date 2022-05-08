@@ -57,10 +57,10 @@
     <string name="addReqOrg">Add Item Request</string>
 
     //Item Strs
-    <string name="item_name">Item Name: </string>
-    <string name="item_quantity">Item Quantity: </string>
+    <string name="item_name">"Item Name: "</string>
+    <string name="item_quantity">"Item Quantity: "</string>
     <string name="quantity">quantity</string>
-    <string name="status">Status: </string>
+    <string name="status">"Status: "</string>
     <string name="pending">pending</string>
     <string name="name">name</string>
 
@@ -70,9 +70,9 @@
     <string name="matchStr">Matches</string>
 
     //Match strs
-    <string name="user_remain"> Donor Amount\n Remaining: </string>
+    <string name="user_remain">"Donor Amount Left: "</string>
     <string name="amount1">amount</string>
-    <string name="org_remain">Organization Amount\n Remaining: </string>
+    <string name="org_remain">"Organization Amount Left: "</string>
     <string name="amount2">amount</string>
 
 </resources>
