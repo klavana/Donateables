@@ -15,6 +15,7 @@ public class Item {
 	private String origin;
 	private String acceptedByOrg;
 	private boolean acceptedByDriver;
+	private User associatedUser;
 
 	// Constructor(s)
 	/**
@@ -23,13 +24,13 @@ public class Item {
 	 * @param iName
 	 * @param iCount
 	 */
-	public Item(String iName, int iCount) {
+	public Item(String iName, int iCount, User user) {
 		name = iName;
 		count = iCount;
-		// destination = iDes;
-		// origin = orig;
 		acceptedByOrg = "pending";
 		acceptedByDriver = false;
+		associatedUser = user;
+		origin = user.getAddress();
 	}
 
 	/**
@@ -43,6 +44,10 @@ public class Item {
 		acceptedByOrg = "pending";
 		acceptedByDriver = false;
 	}
+
+	/*public User getAssociatedUser() {
+		return associatedUser;
+	}*/
 
 	/**
 	 * Returns the name of the item
@@ -105,6 +110,10 @@ public class Item {
 	 */
 	public String getOrgStatus() {
 		return acceptedByOrg;
+	}
+
+	public void setOrgStatus(String acceptedByOrg) {
+		this.acceptedByOrg = acceptedByOrg;
 	}
 
 	/**

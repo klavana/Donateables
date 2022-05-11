@@ -1,11 +1,12 @@
 package com.example.a4g_ksd;
 
+import android.os.Bundle;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -15,8 +16,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class ViewOrgReq extends AppCompatActivity {
-
+public class OrgRequests extends AppCompatActivity {
     RecyclerView recyclerView;
     DatabaseReference ref;
     MyAdapter adapter;
@@ -24,11 +24,12 @@ public class ViewOrgReq extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Toast.makeText(getApplicationContext(),"org requests",Toast.LENGTH_SHORT).show();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.vieworgreq);
+        setContentView(R.layout.orgrequests);
 
-        recyclerView = findViewById(R.id.recycler3);
-        ref = FirebaseDatabase.getInstance().getReference("items/organizations/");
+        recyclerView = findViewById(R.id.requestsRecycler2);
+        ref = FirebaseDatabase.getInstance().getReference("users/organizations/"+MainActivity.org.getUserName()+"/items");
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 

@@ -24,24 +24,20 @@ public class MainOrgPage extends AppCompatActivity {
     }
 
     public void moveToAddItemToList(View v) {
-        Intent intent = new Intent(this, AddItemToList.class);
+        Intent intent = new Intent(this, addItemAsOrg.class);
         startActivity(intent);
     }
-    public void moveToSettings(View v) {
-        Intent intent = new Intent(this, SettingsProfile.class);
+    public void moveToMatchPage(View v) {
+        Intent intent = new Intent(this, OrgMatchPage.class);
         startActivity(intent);
     }
-    public void ViewOrgReq(View v) {
-        Intent intent = new Intent(this, ViewOrgReq.class);
-        String OrgReq = "Placeholder";
-        intent.putExtra("key1", OrgReq);
+    public void OrgReq(View v) {
+        Intent intent = new Intent(this, OrgRequests.class);
         startActivity(intent);
     }
-    public void UserOffers(View v) {
-        Intent intent = new Intent(this, UserOffers.class);
-        final Controller controller = (Controller) getApplicationContext();
-        String CompOffer = controller.getUser().getMyItemsList();
-        intent.putExtra("key3", CompOffer);
+
+    public void toViewDonateables(View v) {
+        Intent intent = new Intent(this, ViewDonateables.class);
         startActivity(intent);
     }
 }

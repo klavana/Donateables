@@ -32,9 +32,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
-        //final Controller controller = (Controller) getApplicationContext();
-
     }
 
     private String nameToString(){
@@ -72,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
     public void setOrg(View v) {
         org = new Organization(nameToString(), locationToString(), mailToString());
         Toast.makeText(getApplicationContext(),"Set Org",Toast.LENGTH_SHORT).show();
-
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("users/organizations");
         DatabaseReference childRef1 = myRef.child(nameToString());
@@ -84,16 +80,19 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AddItemToList.class);
         startActivity(intent);
     }
+
     public void moveToSettings(View v) {
         Intent intent = new Intent(this, SettingsProfile.class);
         startActivity(intent);
     }
+
     public void ViewOrgReq(View v) {
         Intent intent = new Intent(this, ViewOrgReq.class);
         String OrgReq = "Placeholder";
         intent.putExtra("key1", OrgReq);
         startActivity(intent);
     }
+
     public void UserOffers(View v) {
         Intent intent = new Intent(this, UserOffers.class);
         final Controller controller = (Controller) getApplicationContext();
@@ -109,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
         else {
-            setUser(v);
+            setOrg(v);
             Intent intent = new Intent(this, MainOrgPage.class);
             startActivity(intent);
         }
@@ -118,7 +117,6 @@ public class MainActivity extends AppCompatActivity {
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
-
         // Check which radio button was clicked
         switch(view.getId()) {
             case R.id.genUserRadio:
@@ -131,7 +129,4 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
-
-
-
 }

@@ -4,17 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class AddItemToList extends AppCompatActivity {
 
@@ -30,8 +26,8 @@ public class AddItemToList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.additemtolist);
         // must be initialized in constructor
-        editItemQuantity= findViewById(R.id.editItemQuantity);
-        editItemName = findViewById(R.id.EditItemName);
+        editItemQuantity= findViewById(R.id.editQuantityOrg);
+        editItemName = findViewById(R.id.EditItemNameOrg);
         Intent intent = getIntent();
     }
     public void toUserOffers(View v) {
@@ -52,7 +48,7 @@ public class AddItemToList extends AppCompatActivity {
     }
 
     public void addOffer(View v){
-        Item i = new Item(getName(), getQuantity());
+        Item i = new Item(getName(), getQuantity(),MainActivity.user);
         MainActivity.user.addItem(i);
         Toast.makeText(getApplicationContext(),"Add Offer",Toast.LENGTH_SHORT).show();
         displayInfo();
@@ -62,7 +58,7 @@ public class AddItemToList extends AppCompatActivity {
 
     private void readItemDataFB(Item i){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("items");
+        DatabaseReference myRef = database.getReference("items/general");
         myRef.push().setValue(i);
         DatabaseReference myRef2 = database.getReference("users/general/"+MainActivity.user.getUserName()+"/items");
         myRef2.push().setValue(i);

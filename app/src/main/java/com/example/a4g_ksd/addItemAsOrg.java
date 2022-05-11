@@ -24,13 +24,12 @@ public class addItemAsOrg extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_item_as_org);
-        // must be initialized in constructor
-        editItemQuantity= findViewById(R.id.editItemQuantity);
-        editItemName = findViewById(R.id.EditItemName);
+        editItemQuantity= findViewById(R.id.editQuantityOrg);
+        editItemName = findViewById(R.id.EditItemNameOrg);
         Intent intent = getIntent();
     }
-    public void toUserOffers(View v) {
-        Intent intent = new Intent(this, UserOffers.class);
+    public void myRequests(View v) {
+        Intent intent = new Intent(this, OrgRequests.class);
         startActivity(intent);
     }
 
@@ -46,10 +45,9 @@ public class addItemAsOrg extends AppCompatActivity {
         return quantity;
     }
 
-    public void addOffer(View v){
-        Item i = new Item(getName(), getQuantity());
-        final Controller controller = (Controller) getApplicationContext();
-        //MainActivity.user.addItem(i);
+    public void addRequest(View v){
+        Item i = new Item(getName(), getQuantity(), MainActivity.org);
+        MainActivity.org.addItem(i);
         Toast.makeText(getApplicationContext(),"Add Offer",Toast.LENGTH_SHORT).show();
         displayInfo();
         readItemDataFB(i);
@@ -58,26 +56,10 @@ public class addItemAsOrg extends AppCompatActivity {
 
     private void readItemDataFB(Item i){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("items");
+        DatabaseReference myRef = database.getReference("items/organizations");
         myRef.push().setValue(i);
-        /*// Read from the database
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                for(DataSnapshot ds : dataSnapshot.getChildren()){
-                    Item i = ds.getValue(Item.class);
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Log.w("MainActivity", "Failed to read value.", error.toException());
-            }
-        });*/
-
+        DatabaseReference myRef2 = database.getReference("users/organizations/"+MainActivity.org.getUserName()+"/items");
+        myRef2.push().setValue(i);
     }
 
     private void displayInfo(){
@@ -87,6 +69,5 @@ public class addItemAsOrg extends AppCompatActivity {
         TextView addressText = findViewById(R.id.addressDisp);
         itemNameText.setText("Item Name: " + getName());
         itemQuantityText.setText("Quantity: " + getQuantity());
-   //     addressText.setText("Pick-up Address: " + controller.getUser().getAddress());
     }
 }

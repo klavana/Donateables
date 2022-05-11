@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_drawable"
-    tools:context=".MainActivity">
+    tools:context=".MainPage">
 
 
     <LinearLayout
@@ -76,8 +76,8 @@
         android:layout_height="75dp"
         android:layout_marginBottom="175dp"
         android:fontFamily="monospace"
-        android:onClick="moveToSettings"
-        android:text="@string/profileStr"
+        android:onClick="moveToMatchPage"
+        android:text="@string/matchPage"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/browseReqButton2" />

@@ -58,7 +58,6 @@ public class MatchingAlgorithm {
 		for (int x = 0; x < UserList.size(); x++) {
 			for (int y = 0; y < OrgList.size(); y++) {
 				if (UserList.get(x).getName().toLowerCase().equals(OrgList.get(y).getName().toLowerCase())) {
-					matchItems.add(UserList.get(x).getName());
 					match = true; // what does this do
 					numMatches++;
 					int orgCount = OrgList.get(y).getCount();
@@ -77,11 +76,12 @@ public class MatchingAlgorithm {
 						OrgList.get(y).setCount(orgCount);
 						UserList.get(x).setCount(userCount);
 					}
+					matchItems.add("Item: " + UserList.get(x).getName()+"\n"+"Amount Donated: " +userCount);
 				}
 			}
 		}
 
-		return "Match Found: " + matchItems;
+		return "MatchPage Found: " + matchItems;
 	}
 	//Setters
 	public void setUserList(ArrayList<Item> userList) {

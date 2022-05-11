@@ -7,7 +7,7 @@
     <string name="openerMsgStr">"Hi! What would you like to do today?"</string>
     <string name="browseReqStr">"Browse Organizational Requests"</string>
     <string name="addItemStr">"Add Item to Donateables"</string>
-    <string name="profileStr">"Settings and Profile"</string>
+    <string name="matchPage">"Check your Matches!"</string>
     <string name="addItemPageHeader">Add Items Below</string>
     <string name="addItemName">Item Name</string>
     <string name="itemQuantityStr">Item Quantity</string>
@@ -23,6 +23,7 @@
     <string name="CompOfferStr">View Delivered Offers</string>
     <string name="toUserOffersStr">View your offers</string>
 
+
     //Sign up page strs
     <string name="welcomeStr">"Donateables"</string>
     <string name="signUpStr">"Create your profile!"</string>
@@ -37,7 +38,7 @@
     <string name="UserRadio">Regular User</string>
     <string name="textOff1">Regular User</string>
     <string name="textOn1">Organization</string>
-    <string name="viewUserReqStr">View Local Donateables</string>
+    <string name="viewUserReqStr">View My Donateables</string>
     <string name="enterNameStr">Please Enter a Username: </string>
     <string name="enterNameHintStr">Enter a username</string>
     <string name="enterAddressStr">Please Enter Your Address: </string>
@@ -57,11 +58,28 @@
     <string name="addReqOrg">Add Item Request</string>
 
     //Item Strs
-    <string name="item_name">Item Name:</string>
-    <string name="item_quantity">Item Quantity:</string>
+    <string name="item_name">"Item Name: "</string>
+    <string name="item_quantity">"Item Quantity: "</string>
     <string name="quantity">quantity</string>
-    <string name="status">Status:</string>
+    <string name="status">"Status: "</string>
     <string name="pending">pending</string>
     <string name="name">name</string>
+
+    //Org Request Strings
+    <string name="orgRequestTitles">My Requests</string>
+    <string name="toOrgRequest">View My Requests</string>
+    <string name="matchStr">Matches</string>
+    <string name="viewDonateables">Browse Local Donateables</string>
+
+
+    //Match strs
+    <string name="orgmatch">"Organization: "</string>
+    <string name="amount1">amount</string>
+    <string name="org_remain">"Organization Amount Left: "</string>
+    <string name="orgname">name</string>
+    <string name="donatequestion">Donate</string>
+    <string name="acceptquestion">Accept</string>
+
+
 
 </resources>

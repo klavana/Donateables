@@ -17,7 +17,7 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/EditItemName"
+        android:id="@+id/EditItemNameOrg"
         android:layout_width="430dp"
         android:layout_height="73dp"
         android:layout_marginTop="32dp"
@@ -62,7 +62,7 @@
         app:layout_constraintVertical_bias="0.034" />
 
     <EditText
-        android:id="@+id/editItemQuantity"
+        android:id="@+id/editQuantityOrg"
         android:layout_width="431dp"
         android:layout_height="67dp"
         android:layout_marginTop="36dp"
@@ -75,7 +75,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditItemName"
+        app:layout_constraintTop_toBottomOf="@+id/EditItemNameOrg"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
@@ -97,6 +97,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:onClick="toUserOffers"
         android:text="@string/addressCheck"
         android:textAlignment="center"
         android:textSize="34sp"

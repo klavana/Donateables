@@ -27,14 +27,12 @@ public class MainPage extends AppCompatActivity {
         Intent intent = new Intent(this, AddItemToList.class);
         startActivity(intent);
     }
-    public void moveToSettings(View v) {
-        Intent intent = new Intent(this, SettingsProfile.class);
+    public void moveToMatchPage(View v) {
+        Intent intent = new Intent(this, MatchPage.class);
         startActivity(intent);
     }
     public void ViewOrgReq(View v) {
         Intent intent = new Intent(this, ViewOrgReq.class);
-        String OrgReq = "Placeholder";
-        intent.putExtra("key1", OrgReq);
         startActivity(intent);
     }
     public void UserOffers(View v) {
