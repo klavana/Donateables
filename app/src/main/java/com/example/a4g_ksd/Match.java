@@ -18,12 +18,10 @@ public class Match {
         this.user = user;
         this.org = org;
         checkMatch();
-
     }
 
     //Methods
     private void checkMatch(){
-        Log.d("Match","In checkMatch" + user.getName()+(org.getName()) + user.getOrigin() + org.getOrigin());
         if (user.getName().equals(org.getName()) && user.getOrigin().equals(org.getOrigin())){
             match = true;
             if(user.getCount()<org.getCount()){

@@ -46,6 +46,12 @@
         <activity
             android:name=".MatchPage"
             android:exported="true" />
+        <activity
+            android:name=".ViewDonateables"
+            android:exported="true" />
+        <activity
+            android:name=".OrgMatchPage"
+            android:exported="true" />
     </application>
 
 </manifest>

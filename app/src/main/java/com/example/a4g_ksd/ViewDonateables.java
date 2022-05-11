@@ -15,7 +15,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class ViewOrgReq extends AppCompatActivity {
+public class ViewDonateables extends AppCompatActivity {
 
     RecyclerView recyclerView;
     DatabaseReference ref;
@@ -25,10 +25,10 @@ public class ViewOrgReq extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.vieworgreq);
+        setContentView(R.layout.activity_user_offers);
 
-        recyclerView = findViewById(R.id.recycler3);
-        ref = FirebaseDatabase.getInstance().getReference("items/organizations/");
+        recyclerView = findViewById(R.id.requestsRecycler2);
+        ref = FirebaseDatabase.getInstance().getReference("items/general");
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 

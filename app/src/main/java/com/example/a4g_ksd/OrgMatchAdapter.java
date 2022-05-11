@@ -11,14 +11,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.MyViewHolder> {
+public class OrgMatchAdapter extends RecyclerView.Adapter<OrgMatchAdapter.MyViewHolder> {
 
     //Data
     Context context;
     ArrayList<Match> list;
 
     //Constructor
-    public MatchAdapter(Context context, ArrayList<Match> list) {
+    public OrgMatchAdapter(Context context, ArrayList<Match> list) {
         this.context = context;
         this.list = list;
     }
@@ -26,7 +26,7 @@ public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.MyViewHolder
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context).inflate(R.layout.match,parent,false);
+        View v = LayoutInflater.from(context).inflate(R.layout.orgmatch,parent,false);
         return new MyViewHolder(v);
     }
 

@@ -5,7 +5,7 @@
     android:id="@+id/createConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_drawable"
+    android:background="@drawable/gradient_drawablethree"
     android:onClick="setUser"
     android:textAlignment="center">
 
@@ -34,18 +34,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="126dp"
-            android:layout_height="139dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginBottom="820dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/welcomeAndLogo"
-            app:srcCompat="@drawable/donateconnect__4_" />
-
         <TextView
             android:id="@+id/enterEmailTextView"
             android:layout_width="wrap_content"
@@ -53,7 +41,9 @@
             android:layout_marginTop="24dp"
             android:text="@string/enterEmailStr"
             android:textSize="30sp"
-            app:layout_constraintStart_toStartOf="@+id/enterAddressEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/enterAddressEditText" />
 
         <TextView
@@ -63,7 +53,9 @@
             android:layout_marginTop="24dp"
             android:text="@string/enterAddressStr"
             android:textSize="30sp"
-            app:layout_constraintStart_toStartOf="@+id/enterNameEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/enterNameEditText" />
 
         <TextView
@@ -72,11 +64,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="220dp"
-            android:layout_marginEnd="262dp"
             android:text="@string/enterNameStr"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -89,7 +80,9 @@
             android:hint='@string/enterNameHintStr'
             android:inputType="textPersonName"
             android:textSize="30sp"
-            app:layout_constraintStart_toStartOf="@+id/enterNameTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/enterNameTextView"
             tools:ignore="TouchTargetSizeCheck" />
 
@@ -102,7 +95,9 @@
             android:inputType="textPersonName"
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/enterAddresTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/enterAddresTextView"
             app:layout_constraintVertical_bias="0.019"
             tools:ignore="TouchTargetSizeCheck" />
@@ -117,7 +112,9 @@
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
             android:textSize="30sp"
-            app:layout_constraintStart_toStartOf="@+id/enterEmailTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/enterEmailTextView" />
 
         <TextView
@@ -139,15 +136,14 @@
             android:id="@+id/getStartedButton"
             android:layout_width="220dp"
             android:layout_height="100dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="#008DE6"
             android:onClick="moveToMainPage"
             android:text="@string/getStartedStr"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-            app:layout_constraintVertical_bias="0.909" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <RadioGroup
             android:id="@+id/radioGroup"
@@ -188,7 +184,7 @@
             android:text="@string/welcomeStr"
             android:textColor="@color/black"
             android:textSize="60sp"
-            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

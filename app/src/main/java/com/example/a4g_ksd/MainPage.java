@@ -33,8 +33,6 @@ public class MainPage extends AppCompatActivity {
     }
     public void ViewOrgReq(View v) {
         Intent intent = new Intent(this, ViewOrgReq.class);
-        String OrgReq = "Placeholder";
-        intent.putExtra("key1", OrgReq);
         startActivity(intent);
     }
     public void UserOffers(View v) {

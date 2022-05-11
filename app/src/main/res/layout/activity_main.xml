@@ -53,6 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:fontFamily="monospace"
+        android:onClick="ViewOrgReq"
         android:text="@string/browseReqStr"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/browseReqButton2"

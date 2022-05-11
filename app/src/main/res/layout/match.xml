@@ -38,51 +38,18 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/user_remain"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/amount1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                tools:text="@string/amount1" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/donateButton"
+            android:layout_width="218dp"
+            android:layout_height="61dp"
+            android:backgroundTint="#39ACFF"
+            android:text="@string/donatequestion" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/org_remain"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/amount2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/amount2"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-        </LinearLayout>
+            android:orientation="horizontal"/>
 
     </LinearLayout>
 

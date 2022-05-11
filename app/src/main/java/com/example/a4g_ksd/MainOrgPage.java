@@ -28,11 +28,16 @@ public class MainOrgPage extends AppCompatActivity {
         startActivity(intent);
     }
     public void moveToMatchPage(View v) {
-        Intent intent = new Intent(this, MatchPage.class);
+        Intent intent = new Intent(this, OrgMatchPage.class);
         startActivity(intent);
     }
-    public void ViewOrgReq(View v) {
+    public void OrgReq(View v) {
         Intent intent = new Intent(this, OrgRequests.class);
+        startActivity(intent);
+    }
+
+    public void toViewDonateables(View v) {
+        Intent intent = new Intent(this, ViewDonateables.class);
         startActivity(intent);
     }
 }

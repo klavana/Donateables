@@ -45,6 +45,10 @@ public class Item {
 		acceptedByDriver = false;
 	}
 
+	/*public User getAssociatedUser() {
+		return associatedUser;
+	}*/
+
 	/**
 	 * Returns the name of the item
 	 *

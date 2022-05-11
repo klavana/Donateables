@@ -5,7 +5,7 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_drawable"
+    android:background="@drawable/gradient_drawabletwo"
     tools:context=".MainOrgPage">
 
 
@@ -52,8 +52,9 @@
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:fontFamily="monospace"
-        android:onClick="ViewOrgReq"
-        android:text="@string/browseReqStr"
+        android:backgroundTint="#00BEC6"
+        android:onClick="toViewDonateables"
+        android:text="@string/viewDonateables"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/browseReqButton2"
         app:layout_constraintTop_toBottomOf="@+id/addItemButtonOrg" />
@@ -61,10 +62,11 @@
     <Button
         android:id="@+id/browseReqButton2"
         android:layout_width="match_parent"
+        android:backgroundTint="#00C4BC"
         android:layout_height="75dp"
         android:fontFamily="monospace"
-        android:onClick="ViewOrgReq"
-        android:text="@string/viewUserReqStr"
+        android:onClick="OrgReq"
+        android:text="@string/toOrgRequest"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/profileButtonOrg"
         app:layout_constraintTop_toBottomOf="@+id/browseReqButton" />
@@ -72,6 +74,7 @@
     <Button
         android:id="@+id/profileButtonOrg"
         android:layout_width="match_parent"
+        android:backgroundTint="#00C8B7"
         android:layout_height="75dp"
         android:layout_marginBottom="175dp"
         android:fontFamily="monospace"
@@ -87,6 +90,7 @@
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:layout_marginTop="100dp"
+        android:backgroundTint="#00B5D3"
         android:fontFamily="monospace"
         android:minHeight="48dp"
         android:onClick="moveToAddItemToList"
@@ -101,11 +105,11 @@
         android:id="@+id/imageView"
         android:layout_width="126dp"
         android:layout_height="139dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="64dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/appNameAndLogo"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:srcCompat="@drawable/donateconnect__4_" />
+        app:srcCompat="@drawable/donateconnect__5_" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

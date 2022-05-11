@@ -23,6 +23,7 @@
     <string name="CompOfferStr">View Delivered Offers</string>
     <string name="toUserOffersStr">View your offers</string>
 
+
     //Sign up page strs
     <string name="welcomeStr">"Donateables"</string>
     <string name="signUpStr">"Create your profile!"</string>
@@ -37,7 +38,7 @@
     <string name="UserRadio">Regular User</string>
     <string name="textOff1">Regular User</string>
     <string name="textOn1">Organization</string>
-    <string name="viewUserReqStr">View Local Donateables</string>
+    <string name="viewUserReqStr">View My Donateables</string>
     <string name="enterNameStr">Please Enter a Username: </string>
     <string name="enterNameHintStr">Enter a username</string>
     <string name="enterAddressStr">Please Enter Your Address: </string>
@@ -68,11 +69,17 @@
     <string name="orgRequestTitles">My Requests</string>
     <string name="toOrgRequest">View My Requests</string>
     <string name="matchStr">Matches</string>
+    <string name="viewDonateables">Browse Local Donateables</string>
+
 
     //Match strs
-    <string name="user_remain">"Donor Amount Left: "</string>
+    <string name="orgmatch">"Organization: "</string>
     <string name="amount1">amount</string>
     <string name="org_remain">"Organization Amount Left: "</string>
-    <string name="amount2">amount</string>
+    <string name="orgname">name</string>
+    <string name="donatequestion">Donate</string>
+    <string name="acceptquestion">Accept</string>
+
+
 
 </resources>

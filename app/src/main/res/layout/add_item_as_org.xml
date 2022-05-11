@@ -5,7 +5,7 @@
     android:id="@+id/constraintLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_drawable">
+    android:background="@drawable/gradient_drawabletwo">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -36,6 +36,7 @@
     <Button
         android:id="@+id/submitItemUser"
         android:layout_width="220dp"
+        android:backgroundTint="#1FB0D5"
         android:layout_height="88dp"
         android:layout_marginTop="248dp"
         android:onClick="addRequest"
@@ -49,6 +50,7 @@
     <Button
         android:id="@+id/toUserOfferPage"
         android:layout_width="222dp"
+        android:backgroundTint="#1CC3BB"
         android:layout_height="114dp"
         android:layout_marginBottom="152dp"
         android:onClick="myRequests"
