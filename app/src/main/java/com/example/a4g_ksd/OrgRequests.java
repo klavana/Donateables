@@ -15,13 +15,21 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-
+/**
+ * Models a Donation Item for the app
+ *
+ * @author Donateables Team
+ *
+ */
 public class OrgRequests extends AppCompatActivity {
     RecyclerView recyclerView;
     DatabaseReference ref;
     MyAdapter adapter;
     ArrayList<Item> list;
 
+    /**
+     * Constructs the onCreate object when the page is initialized
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Toast.makeText(getApplicationContext(),"org requests",Toast.LENGTH_SHORT).show();
@@ -38,6 +46,10 @@ public class OrgRequests extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         ref.addValueEventListener(new ValueEventListener() {
+            /**
+             *
+             * @param snapshot
+             */
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot: snapshot.getChildren()){
@@ -48,6 +60,10 @@ public class OrgRequests extends AppCompatActivity {
                 adapter.notifyDataSetChanged();
             }
 
+            /**
+             *
+             * @param error
+             */
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
             }

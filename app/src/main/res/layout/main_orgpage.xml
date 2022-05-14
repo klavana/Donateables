@@ -74,9 +74,9 @@
     <Button
         android:id="@+id/profileButtonOrg"
         android:layout_width="match_parent"
-        android:backgroundTint="#00C8B7"
         android:layout_height="75dp"
         android:layout_marginBottom="175dp"
+        android:backgroundTint="#00C8B7"
         android:fontFamily="monospace"
         android:onClick="moveToMatchPage"
         android:text="@string/matchPage"

@@ -41,8 +41,8 @@
     <string name="viewUserReqStr">View My Donateables</string>
     <string name="enterNameStr">Please Enter a Username: </string>
     <string name="enterNameHintStr">Enter a username</string>
-    <string name="enterAddressStr">Please Enter Your Address: </string>
-    <string name="enterAddressHintStr">Street, City, Zip</string>
+    <string name="enterAddressStr">Please Enter Your Zipcode: </string>
+    <string name="enterAddressHintStr">Zipcode</string>
     <string name="enterEmailStr">Please Enter Your Email: </string>
     <string name="enterEmailHintStr">Enter your email</string>
     <string name= "getStartedStr">Get Started!</string>
@@ -77,7 +77,7 @@
     <string name="amount1">amount</string>
     <string name="org_remain">"Organization Amount Left: "</string>
     <string name="orgname">name</string>
-    <string name="donatequestion">Donate</string>
+    <string name="donatequestion">Accept</string>
     <string name="acceptquestion">Accept</string>
 
 

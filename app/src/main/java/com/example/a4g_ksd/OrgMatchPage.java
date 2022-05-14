@@ -17,7 +17,12 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-
+/**
+ * Models a Donation Item for the app
+ *
+ * @author Donateables Team
+ *
+ */
 public class OrgMatchPage extends AppCompatActivity {
 
     DatabaseReference genRef;
@@ -29,9 +34,12 @@ public class OrgMatchPage extends AppCompatActivity {
     ArrayList<Item> userItems;
     ArrayList<Item> orgItems;
 
+    /**
+     * Constructs the onCreate object when the page is initialized
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.orgmatch);
+        setContentView(R.layout.usermatch);
 
         orgRef = FirebaseDatabase.getInstance().getReference("users/organizations/" + MainActivity.org.getUserName() + "/items");
         genRef = FirebaseDatabase.getInstance().getReference("items/general");
@@ -48,6 +56,10 @@ public class OrgMatchPage extends AppCompatActivity {
 
 
         genRef.addValueEventListener(new ValueEventListener() {
+            /**
+             *
+             * @param snapshot
+             */
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
@@ -61,12 +73,20 @@ public class OrgMatchPage extends AppCompatActivity {
                 adapter.notifyDataSetChanged();
             }
 
+            /**
+             *
+             * @param error
+             */
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
             }
         });
 
         orgRef.addValueEventListener(new ValueEventListener() {
+            /**
+             *
+             * @param snapshot
+             */
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
@@ -84,6 +104,10 @@ public class OrgMatchPage extends AppCompatActivity {
 
             }
 
+            /**
+             *
+             * @param error
+             */
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
             }

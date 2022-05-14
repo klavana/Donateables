@@ -10,7 +10,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-
+/**
+ * Models a Donation Item for the app
+ *
+ * @author Donateables Team
+ *
+ */
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     //Data
@@ -18,11 +23,23 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     ArrayList<Item> list;
 
     //Constructor
+
+    /**
+     * Constructs a MyAdapter object with a given context and list of items
+     * @param context
+     * @param list
+     */
     public MyAdapter(Context context, ArrayList<Item> list) {
         this.context = context;
         this.list = list;
     }
 
+    /**
+     *
+     * @param parent
+     * @param viewType
+     * @return
+     */
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -30,6 +47,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         return new MyViewHolder(v);
     }
 
+    /**
+     *
+     * @param holder
+     * @param position
+     */
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Item item = list.get(position);
@@ -39,11 +61,18 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     }
 
+    /**
+     * Returns the count of the item
+     * @return itemCount
+     */
     @Override
     public int getItemCount() {
         return list.size();
     }
 
+    /**
+     *
+     */
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         TextView name,quantity,status;
 

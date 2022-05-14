@@ -11,7 +11,12 @@ import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
+/**
+ * Models a Donation Item for the app
+ *
+ * @author Donateables Team
+ *
+ */
 public class AddItemToList extends AppCompatActivity {
 
     //Data
@@ -22,6 +27,9 @@ public class AddItemToList extends AppCompatActivity {
 
     @Override
     //"Constructor"
+    /**
+     * Constructs the onCreate object when the page is initialized
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.additemtolist);
@@ -30,23 +38,40 @@ public class AddItemToList extends AppCompatActivity {
         editItemName = findViewById(R.id.EditItemNameOrg);
         Intent intent = getIntent();
     }
+
+    /**
+     * Nagivates the user to the UserOffers page
+     * @param v
+     */
     public void toUserOffers(View v) {
         Intent intent = new Intent(this, UserOffers.class);
         startActivity(intent);
     }
 
     // Methods
+    /**
+     * Returns the name of the Item
+     * @return itemName
+     */
     public String getName(){
         name = editItemName.getText().toString();
         return name;
     }
 
+    /**
+     * Returns the quantity of the item
+     * @return itemQuantity
+     */
     public int getQuantity(){
         quantityStr = editItemQuantity.getText().toString();
         quantity = Integer.parseInt(quantityStr);
         return quantity;
     }
 
+    /**
+     * Adds an Item request
+     * @param v
+     */
     public void addOffer(View v){
         Item i = new Item(getName(), getQuantity(),MainActivity.user);
         MainActivity.user.addItem(i);
@@ -56,6 +81,10 @@ public class AddItemToList extends AppCompatActivity {
 
     }
 
+    /**
+     * Reads the item from the Donateables Firebase Database
+     * @param i
+     */
     private void readItemDataFB(Item i){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("items/general");
@@ -85,8 +114,9 @@ public class AddItemToList extends AppCompatActivity {
             }
         });*/
 
-
-
+    /**
+     * Displays the Item information to the user using the app
+     */
     private void displayInfo(){
         //final Controller controller = (Controller) getApplicationContext();
         TextView itemNameText = findViewById(R.id.itemNameDisp);

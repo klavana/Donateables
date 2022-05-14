@@ -5,8 +5,16 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+/**
+ * Models a Donation Item for the app
+ *
+ * @author Donateables Team
+ *
+ */
 public class SettingsProfile extends AppCompatActivity {
+    /**
+     * Constructs the onCreate object when the page is initialized
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_profile);
