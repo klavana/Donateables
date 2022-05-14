@@ -14,7 +14,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-
+/**
+ * Models a Donation Item for the app
+ *
+ * @author Donateables Team
+ *
+ */
 public class ViewOrgReq extends AppCompatActivity {
 
     RecyclerView recyclerView;
@@ -22,6 +27,10 @@ public class ViewOrgReq extends AppCompatActivity {
     MyAdapter adapter;
     ArrayList<Item> list;
 
+    /**
+     * Constructs the onCreate object when the page is initialized
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +46,10 @@ public class ViewOrgReq extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         ref.addValueEventListener(new ValueEventListener() {
+            /**
+             *
+             * @param snapshot
+             */
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot: snapshot.getChildren()){
@@ -47,6 +60,10 @@ public class ViewOrgReq extends AppCompatActivity {
                 adapter.notifyDataSetChanged();
             }
 
+            /**
+             *
+             * @param error
+             */
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
             }

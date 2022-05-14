@@ -3,7 +3,7 @@ package com.example.a4g_ksd;
 /**
  * Models a Donation Item for the app
  *
- * @author Sashank, David, Karisma
+ * @author Donateables Team
  *
  */
 public class Item {

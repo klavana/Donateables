@@ -5,7 +5,12 @@ import android.util.Log;
 import com.example.a4g_ksd.Item;
 
 import java.util.ArrayList;
-
+/**
+ * Models a Donation Item for the app
+ *
+ * @author Donateables Team
+ *
+ */
 public class Match {
     // Data
     private Item user;
@@ -13,6 +18,12 @@ public class Match {
     private boolean match;
 
     //Constructors
+
+    /**
+     * Constructs a Match object to match the user to the organization
+     * @param user
+     * @param org
+     */
     public Match(Item user, Item org){
         Log.d("Match","In Match" + user.getName()+(org.getName()) + user.getOrigin() + org.getOrigin());
         this.user = user;
@@ -21,6 +32,10 @@ public class Match {
     }
 
     //Methods
+
+    /**
+     * Checks to see whether the User has an item in common with the Organization
+     */
     private void checkMatch(){
         if (user.getName().equals(org.getName()) && user.getOrigin().equals(org.getOrigin())){
             match = true;
@@ -45,18 +60,35 @@ public class Match {
             match = false;
         }
     }
+
+    /**
+     * Prints out the Match object as a string with the user and matching item
+     * @return
+     */
     public String toString(){
         return user.getName() +" " + getMatch();
     }
 
+    /**
+     * Returns the user object
+     * @return
+     */
     public Item getUser() {
         return user;
     }
 
+    /**
+     * Sets the user to the specified user
+     * @param user
+     */
     public void setUser(Item user) {
         this.user = user;
     }
 
+    /**
+     * Returns the Organization object
+     * @return
+     */
     public Item getOrg() {
         return org;
     }

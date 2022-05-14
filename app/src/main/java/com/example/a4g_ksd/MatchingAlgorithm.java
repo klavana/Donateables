@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Models the matching algorithm for the donation app
  * 
- * @author Sashank, David, Karisma
+ * @author Donateables Team
  *
  */
 public class MatchingAlgorithm {

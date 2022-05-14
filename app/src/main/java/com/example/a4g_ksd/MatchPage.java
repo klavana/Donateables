@@ -17,7 +17,12 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-
+/**
+ * Models a Donation Item for the app
+ *
+ * @author Donateables Team
+ *
+ */
 public class MatchPage extends AppCompatActivity {
 
     DatabaseReference genRef;
@@ -29,6 +34,9 @@ public class MatchPage extends AppCompatActivity {
     ArrayList<Item> userItems;
     ArrayList<Item> orgItems;
 
+    /**
+     * Constructs the onCreate object when the page is initialized
+     */
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.usermatch);
@@ -45,8 +53,6 @@ public class MatchPage extends AppCompatActivity {
         matches = new ArrayList<>();
         adapter = new MatchAdapter(this,matches);
         recyclerView.setAdapter(adapter);
-
-
 
         genRef.addValueEventListener(new ValueEventListener() {
             @Override
